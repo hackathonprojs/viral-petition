@@ -90,7 +90,7 @@ app.get('/petition', function (req, res) {
   // signHere.xPosition = '50';
   // signHere.yPosition = '50';
 
-  const defaultName = "John Smith";
+  const defaultName = "Coder Collective";
   const defaultAddress = "101 Beverly Dr, Beverly Hills, CA 90210";
   const defaultAge = "22";
 
