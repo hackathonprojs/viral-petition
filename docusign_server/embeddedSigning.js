@@ -27,7 +27,7 @@ const recipientName = 'coder collective';
 const recipientEmail = 'codercollective@gmail.com';
 
 //Point this to the document you wish to send's location on the local machine. Default location is __workingDir\fileName
-const fileName = 'docs/forest_petition2.pdf';
+const fileName = 'docs/forest_petition3.pdf';
 
 //-------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------
@@ -81,8 +81,12 @@ app.get('/', function (req, res) {
   signHere.pageNumber = '1';
   signHere.recipientId = '1';
   signHere.tabLabel = 'SignHereTab';
-  signHere.xPosition = '50';
-  signHere.yPosition = '50';
+  signHere.anchorString = 'Signed';
+  signHere.anchorUnits = 'pixels';
+  signHere.anchorYOffset = '50';
+  signHere.anchorXOffset = '5';
+  // signHere.xPosition = '50';
+  // signHere.yPosition = '50';
 
   const defaultName = "John Smith";
   const defaultAddress = "101 Beverly Dr, Beverly Hills, CA 90210";
