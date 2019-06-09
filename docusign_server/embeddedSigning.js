@@ -32,7 +32,7 @@ const fileName = 'docs/forest_petition3.pdf';
 //-------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------
 
-app.get('/', function (req, res) {
+app.get('/petition', function (req, res) {
 
   apiClient.setBasePath('https://demo.docusign.net/restapi');
   apiClient.addDefaultHeader('Authorization', 'Bearer ' + OAuthToken);
