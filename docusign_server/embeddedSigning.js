@@ -18,7 +18,7 @@ const fs = require('fs');
 //Obtain an OAuth token from https://developers.docusign.com/oauth-token-generator
 //Obtain your accountId from account-d.docusign.com > Go To Admin > API and Keys
 
-const OAuthToken = 'eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiNjgxODVmZjEtNGU1MS00Y2U5LWFmMWMtNjg5ODEyMjAzMzE3In0.AQkAAAABAAUABwAAbvVrluzWSAgAAK4Yetns1kgCAFKc49eTdTdLngDigE6OAQMVAAEAAAAYAAkAAAAFAAAAKwAAAC0AAAAvAAAAMQAAADIAAAA4AAAAMwAAADUAAAANACQAAABmMGYyN2YwZS04NTdkLTRhNzEtYTRkYS0zMmNlY2FlM2E5NzgwAICt51WW7NZINwCAhPAcBEvrSbI1fmVlVh7w.xod5EeFpyJruYQJdSYMzPjjZPSQ6V-5qDPoBHueV69Iq_R9OlibwA0CrZEFOm1lZ1OGizhNSHFOa6-3b061lT5UJ33uN1vyK1lH0iRghsWk_lcDLCt91y7NWwf8L_tcAKE8LBpHKhJ2ybzJVfMyryqqkQ9ob_TDY8G75uTe5IcblwI3UZnHwdAPKuAhr3gPv2UXbncTxKcrne_xZQY28p2L67BJbT3z2LyB989-SA4rOlUTJNouy79NbNvUTw2sHKvHkeiDrmKw8hOFU8maCpEWq_-OFjCmk8CqhfCofR1lcuPjRgzbv_WmYyIUVLiWlqu_5pdkmx6H9d05RIpt8CA';
+const OAuthToken = 'eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiNjgxODVmZjEtNGU1MS00Y2U5LWFmMWMtNjg5ODEyMjAzMzE3In0.AQkAAAABAAUABwAAbUIiAu3WSAgAAK1lMEXt1kgCAFKc49eTdTdLngDigE6OAQMVAAEAAAAYAAkAAAAFAAAAKwAAAC0AAAAvAAAAMQAAADIAAAA4AAAAMwAAADUAAAANACQAAABmMGYyN2YwZS04NTdkLTRhNzEtYTRkYS0zMmNlY2FlM2E5NzgwAACXigYB7dZINwCAhPAcBEvrSbI1fmVlVh7w.gkfPUolBmkwxTHIwNA5-iZ8jWWHrVgQDgX9GTzQqjIHgu0I2cm2JskGZOsUbY4LmdXvrgjfwTBJLDgv3ba9uJIYeeXQOfRW1vv8Dn3YfcSDQwARBfxG0m0dY3z1SLjFhwJQLMMAPgFq9vcNz1hqhZ_vrj8E__v9s9Qio7KFGVN0DE63xjs53fEJPMP769q7Vlgywo5-r5GXwuyxR-jGJSAQG_mEDGqfYhhXFbI33wloojpddH5EFDnMmHksBAVZTU3k4ain6i-WGk2QXDVvU_HoroGCdQyYsLBiLjluJGCgBgviz1Qn6lQxzox38Qy48Qlb2qDfEcvaMdrJK4CHQTA';
 const accountId = '8502426';
 
 
@@ -171,7 +171,7 @@ app.get('/petition', function (req, res) {
     recipientViewRequest.authenticationMethod = 'email';
     recipientViewRequest.clientUserId = '123';
     recipientViewRequest.recipientId = '1';
-    recipientViewRequest.returnUrl = 'http://localhost:3001/dsreturn';
+    recipientViewRequest.returnUrl = 'http://localhost:3000/';
     recipientViewRequest.userName = recipientName;
     recipientViewRequest.email = recipientEmail;
 
