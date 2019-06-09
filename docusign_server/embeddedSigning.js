@@ -23,7 +23,7 @@ const accountId = '8502426';
 
 
 //Recipient Information goes here
-const recipientName = 'coder collective';
+const recipientName = "Solomon Wu";
 const recipientEmail = 'codercollective@gmail.com';
 
 //Point this to the document you wish to send's location on the local machine. Default location is __workingDir\fileName
@@ -90,8 +90,8 @@ app.get('/petition', function (req, res) {
   // signHere.xPosition = '50';
   // signHere.yPosition = '50';
 
-  const defaultName = "Coder Collective";
-  const defaultAddress = "101 Beverly Dr, Beverly Hills, CA 90210";
+  const defaultName = recipientName;
+  const defaultAddress = "101 San Antonio Rd, Mountain View, CA 94040";
   const defaultAge = "22";
 
   let textName = docusign.Text.constructFromObject({
