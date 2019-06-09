@@ -23,8 +23,8 @@ const accountId = '8502426';
 
 
 //Recipient Information goes here
-const recipientName = "Solomon Wu";
-const recipientEmail = 'codercollective@gmail.com';
+let recipientName = "Solomon Wu";
+let recipientEmail = 'codercollective@gmail.com';
 
 //Point this to the document you wish to send's location on the local machine. Default location is __workingDir\fileName
 const fileName = 'docs/forest_petition3.pdf';
@@ -35,6 +35,11 @@ const fileName = 'docs/forest_petition3.pdf';
 app.use(express.static('public'));
 
 app.get('/petition', function (req, res) {
+
+  if (req.query.name && req.query.email) {
+    recipientName = req.query.name;
+    recipientEmail = req.query.email;
+  }
 
   apiClient.setBasePath('https://demo.docusign.net/restapi');
   apiClient.addDefaultHeader('Authorization', 'Bearer ' + OAuthToken);
