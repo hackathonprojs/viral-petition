@@ -32,6 +32,8 @@ const fileName = 'docs/forest_petition3.pdf';
 //-------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------
 
+app.use(express.static('public'));
+
 app.get('/petition', function (req, res) {
 
   apiClient.setBasePath('https://demo.docusign.net/restapi');
