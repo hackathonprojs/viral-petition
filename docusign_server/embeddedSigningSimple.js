@@ -27,7 +27,7 @@ const recipientName = 'coder collective';
 const recipientEmail = 'codercollective@gmail.com';
 
 //Point this to the document you wish to send's location on the local machine. Default location is __workingDir\fileName
-const fileName = 'docs/forest_petition2.pdf';
+const fileName = 'docs/forest_petition.pdf';
 
 //-------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------
@@ -84,52 +84,11 @@ app.get('/', function (req, res) {
   signHere.xPosition = '50';
   signHere.yPosition = '50';
 
-  const defaultName = "John Smith";
-  const defaultAddress = "101 Beverly Dr, Beverly Hills, CA 90210";
-  const defaultAge = "22";
-
-  let textName = docusign.Text.constructFromObject({
-    anchorString: '/name/', anchorUnits: 'pixels',
-    anchorYOffset: '-9', anchorXOffset: '-9',
-    //xPosition: '150', yPosition: '150',
-    font: 'helvetica', fontSize: 'size11',
-    bold: 'true', value: defaultName,
-    locked: 'false', tabId: 'legal_name',
-    tabLabel: 'Legal name'
-  });
-
-  let textAddress = docusign.Text.constructFromObject({
-    anchorString: '/address/', anchorUnits: 'pixels',
-    anchorYOffset: '-9', anchorXOffset: '-9',
-    //xPosition: '150', yPosition: '150',
-    font: 'helvetica', fontSize: 'size11',
-    bold: 'true', value: defaultAddress,
-    locked: 'false', tabId: 'address',
-    tabLabel: 'address'
-  });
-
-  let textAge = docusign.Text.constructFromObject({
-    anchorString: '/age/', anchorUnits: 'pixels',
-    anchorYOffset: '-9', anchorXOffset: '-9',
-    //xPosition: '150', yPosition: '150',
-    font: 'helvetica', fontSize: 'size11',
-    bold: 'true', value: defaultAge,
-    locked: 'false', tabId: 'age',
-    tabLabel: 'age'
-  });
-
   //Create the array for SignHere tabs, then add it to the general tab array
   signHereTabArray = [];
   signHereTabArray.push(signHere);
 
-  //Create the array for text tabs, then add it to the general tab array
-  textTabArray = [];
-  textTabArray.push(textName);
-  textTabArray.push(textAddress);
-  textTabArray.push(textAge);
-
   tabs.signHereTabs = signHereTabArray;
-  tabs.textTabs = textTabArray;
 
   //Then set the recipient, named signer, tabs to the previously created tab array
   signer.tabs = tabs;
