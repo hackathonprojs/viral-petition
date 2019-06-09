@@ -9,7 +9,7 @@ const fs = require('fs');
 
 //On execution an envelope is sent to the provided email address, one signHere
 //tab is added, the document supplied in workingdirectory\fileName is used.
-//Open a new browser pointed at http://localhost:3000 to execute. 
+//Open a new browser pointed at http://localhost:3001 to execute. 
 //-------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------
 
@@ -167,7 +167,7 @@ app.get('/', function (req, res) {
     recipientViewRequest.authenticationMethod = 'email';
     recipientViewRequest.clientUserId = '123';
     recipientViewRequest.recipientId = '1';
-    recipientViewRequest.returnUrl = 'http://localhost:3000/dsreturn';
+    recipientViewRequest.returnUrl = 'http://localhost:3001/dsreturn';
     recipientViewRequest.userName = recipientName;
     recipientViewRequest.email = recipientEmail;
 
