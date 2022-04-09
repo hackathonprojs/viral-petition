@@ -22,7 +22,7 @@
   "dependencies": {
     "docusign-esign": "^4.3.0",
     "express": "^4.17.1",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "^3.3.0"
